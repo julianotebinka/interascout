@@ -19,7 +19,7 @@ This one is simple :).
 
 Clone this repository to your local machine.
 
-Run 'npm install' in the downloaded folder.
+Run `npm install` in the downloaded folder.
 
 And that's it. :sunglasses:
 
@@ -28,15 +28,15 @@ And that's it. :sunglasses:
 Serverless Framework allows you to invoke functions locally. I included a sample.json file mocking a path parameter to replicate the scenario when invoking this service via API calls. To run locally:
 
 List available scrapers:
-'serverless invoke local --function getScrapers'
+`serverless invoke local --function getScrapers`
 
 Scraper service (that will scrape Flamengo's website):
-'serverless invoke local --function scrape --path .\sample.json'
+`serverless invoke local --function scrape --path .\sample.json`
 
 ## Deployment
 
 Just hit:
-'serverless deploy'
+`serverless deploy`
 
 And there you go. Serverless Framework will use AWS CloudFormation to create all necessary resources, including an API in AWS API Gateway connected to the Lambda functions deployed. :scream:
 
