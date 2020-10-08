@@ -4,84 +4,44 @@ Intera SCOUT
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This project was built using [Serverless](https://www.serverless.com/) framework and targeting AWS.
+It's a quite simple code with no persistence, just a mocked PoC of a scraper validating some aspects of the architecture.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+[NodeJS](https://nodejs.org/en/) v14 or later
+[Serverless Framework](https://www.serverless.com/framework/docs/getting-started/)
+An AWS account for serverless deployment (IAM role configured, etc.).
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+This one is simple :).
+Clone this repository to your local machine.
+Run npm install in the downloaded folder.
 
-Say what the step will be
+And that's it.
 
-```
-Give the example
-```
+## Local running
 
-And repeat
+Serverless Framework allows you to invoke functions locally. I included a sample.json file mocking a path parameter to replicate the scenario when invoking this service via API calls. To run locally:
 
-```
-until finished
-```
+List available scrapers:
+serverless invoke local --function getScrapers
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+Scraper service (that will scrape Flamengo's website):
+serverless invoke local --function scrape --path .\sample.json
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Just hit:
+serverless deploy
 
-## Built With
-
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+And there you go. Naturally you will have to setup AWS environment and credentials to make it work.
 
 ## Authors
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+- **Juliano Tebinka** - _Initial work_
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
