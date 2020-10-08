@@ -9,9 +9,9 @@ It's a quite simple code with no persistence, just a mocked PoC of a scraper val
 
 ### Prerequisites
 
-[NodeJS](https://nodejs.org/en/) v14 or later
-[Serverless Framework](https://www.serverless.com/framework/docs/getting-started/)
-An AWS account for serverless deployment (IAM role configured, etc.).
+- [NodeJS](https://nodejs.org/en/) v14 or later
+- [Serverless Framework](https://www.serverless.com/framework/docs/getting-started/)
+- An AWS account for serverless deployment (IAM role configured, etc.).
 
 ### Installing
 
